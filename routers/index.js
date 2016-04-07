@@ -6,10 +6,11 @@ router.all("/", function (req, res, next) {
 });
 router.get("/", function (req, res, next) {
     res.render("index");
+    console.log("get");
     next();
 }).post("/", function (req, res, next) {
     console.log("post");
-    res.send("ok");
+    res.send("post");
     next();
 });
 
