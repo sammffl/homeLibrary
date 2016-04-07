@@ -1,0 +1,29 @@
+{
+  "name": "home-library",
+  "description": "collecting books",
+  "main": "app.js",
+  "authors": [
+    "sam.shen"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "sammffl",
+    "book"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "respond": "Respond#^1.4.2",
+    "html5shiv": "^3.7.3",
+    "device.js": "devicejs#^0.2.7",
+    "font-awesome": "Font-Awesome#^4.5.0"
+  }
+}

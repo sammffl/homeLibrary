@@ -1,0 +1,34 @@
+{
+  "name": "home-library",
+  "version": "1.0.0",
+  "description": "collecting books",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammffl/homeLibrary.git"
+  },
+  "keywords": [
+    "sammffl",
+    "book"
+  ],
+  "author": "sam.shen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sammffl/homeLibrary/issues"
+  },
+  "homepage": "https://github.com/sammffl/homeLibrary#readme",
+  "dependencies": {
+    "async": "^1.5.2",
+    "body-parser": "^1.15.0",
+    "cheerio": "^0.20.0",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "moment": "^2.12.0",
+    "mongoose": "^4.4.11",
+    "underscore": "^1.8.3"
+  }
+}
