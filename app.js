@@ -1,18 +1,28 @@
-var express = require('express');
+var express = require('express'),
+    https = require("https"),
+    http = require('http'),
+    path = require('path');
+
 var app = express();
-var admin = express();
+var router = require("./routers/index");
+var admin = require("./routers/admin");
+
 var config = require("./config.json");
 
-app.get('/', function (req, res) {
-    res.send('Hello World')
-});
+app.use('/static/', express.static(path.join(__dirname, 'public')));
+app.set("views", path.join(__dirname, 'views'));
+app.set("view engine", "jade");
 
-admin.get("/", function (req, res) {
-    res.send('admin page');
-});
-
+app.use('/', router);
 app.use("/admin", admin);
 
 
-app.listen(3000);
-console.log('Express started on port 3000');
+function init() {
+    http.createServer(app).listen(config.http_port || 8808);
+    var options = {};
+    https.createServer(options, app).listen(config.https_port || 8809);
+    console.log('Express started http on port ', config.http_port);
+    console.log('Express started https on port ', config.https_port);
+}
+
+init();
