@@ -10,6 +10,7 @@ var admin = require("./routers/admin");
 var config = require("./config.json");
 
 app.use('/static/', express.static(path.join(__dirname, 'public')));
+app.use('/bower_components/',express.static(path.join(__dirname, "bower_components")));
 app.set("views", path.join(__dirname, 'views'));
 app.set("view engine", "jade");
 
