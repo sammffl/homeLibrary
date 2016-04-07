@@ -10,14 +10,14 @@ var admin = require("./routers/admin");
 var config = require("./config.json");
 
 app.use('/static/', express.static(path.join(__dirname, 'public')));
-app.use('/bower_components/',express.static(path.join(__dirname, "bower_components")));
+app.use('/bower_components/', express.static(path.join(__dirname, "bower_components")));
 app.set("views", path.join(__dirname, 'views'));
 app.set("view engine", "jade");
 
 app.use('/', router);
 app.use("/admin", admin);
 
-
+console.log(path.join(__dirname, "bower_components"));
 function init() {
     http.createServer(app).listen(config.http_port || 8808);
     var options = {};
@@ -27,3 +27,8 @@ function init() {
 }
 
 init();
+
+
+process.on('uncaughtException', function (err) {
+    console.log('未捕捉到的错误', err);
+});
