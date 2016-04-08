@@ -19,9 +19,9 @@ app.use("/", controllers);
 
 console.log(path.join(__dirname, "bower_components"));
 function init() {
-    http.createServer(app).listen(config.httpPort || 8808);
+    http.createServer(app).listen(config.httpPort || 8801);
     var options = {};
-    https.createServer(options, app).listen(config.httpsPort || 8809);
+    https.createServer(options, app).listen(config.httpsPort || 8802);
     console.log('Express started http on port ', config.httpPort);
     console.log('Express started https on port ', config.httpsPort);
 }

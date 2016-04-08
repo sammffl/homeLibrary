@@ -1,7 +1,7 @@
 var fs = require("fs");
 var config_default = {
-    "httpPort": "8808",
-    "httpsPort": "8809",
+    "httpPort": "8801",
+    "httpsPort": "8802",
     "doubanBookSearchUrl": "https://book.douban.com/subject_search?search_text={()}&cat=1001",
     "doubanBookTagUrl": "https://book.douban.com/tag/?icn=index-nav",
     "default": "1"
