@@ -15,9 +15,7 @@ app.use('/bower_components/', express.static(path.join(__dirname, "bower_compone
 app.set("views", path.join(__dirname, 'views'));
 app.set("view engine", "jade");
 
-//app.use('/', router);
 app.use("/", controllers);
-//app.use("/admin", admin);
 
 console.log(path.join(__dirname, "bower_components"));
 function init() {
@@ -29,7 +27,6 @@ function init() {
 }
 
 init();
-
 
 process.on('uncaughtException', function (err) {
     console.log('未捕捉到的错误', err);
