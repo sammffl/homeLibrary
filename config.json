@@ -1,4 +1,6 @@
 {
-  "http_port": "8808",
-  "https_port": "8809"
+  "httpPort": "8808",
+  "httpsPort": "8809",
+  "doubanBookSearchUrl":"https://book.douban.com/subject_search?search_text={()}&cat=1001",
+  "doubanBookTagUrl":"https://book.douban.com/tag/?icn=index-nav"
 }

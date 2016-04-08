@@ -7,7 +7,7 @@ var app = express();
 var router = require("./routers/index");
 var admin = require("./routers/admin");
 
-var config = require("./config.json");
+var config = require("./config")();
 
 app.use('/static/', express.static(path.join(__dirname, 'public')));
 app.use('/bower_components/', express.static(path.join(__dirname, "bower_components")));
@@ -19,11 +19,11 @@ app.use("/admin", admin);
 
 console.log(path.join(__dirname, "bower_components"));
 function init() {
-    http.createServer(app).listen(config.http_port || 8808);
+    http.createServer(app).listen(config.httpPort || 8808);
     var options = {};
-    https.createServer(options, app).listen(config.https_port || 8809);
-    console.log('Express started http on port ', config.http_port);
-    console.log('Express started https on port ', config.https_port);
+    https.createServer(options, app).listen(config.httpsPort || 8809);
+    console.log('Express started http on port ', config.httpPort);
+    console.log('Express started https on port ', config.httpsPort);
 }
 
 init();
