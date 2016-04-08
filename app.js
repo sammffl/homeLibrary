@@ -4,8 +4,9 @@ var express = require('express'),
     path = require('path');
 
 var app = express();
-var router = require("./routers/index");
-var admin = require("./routers/admin");
+var controllers = require("./controllers");
+//var router = require("./routers/index");
+//var admin = require("./routers/admin");
 
 var config = require("./config")();
 
@@ -14,8 +15,9 @@ app.use('/bower_components/', express.static(path.join(__dirname, "bower_compone
 app.set("views", path.join(__dirname, 'views'));
 app.set("view engine", "jade");
 
-app.use('/', router);
-app.use("/admin", admin);
+//app.use('/', router);
+app.use("/", controllers);
+//app.use("/admin", admin);
 
 console.log(path.join(__dirname, "bower_components"));
 function init() {
