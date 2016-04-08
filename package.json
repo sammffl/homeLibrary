@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node app.js"
+    "start": "node ./app.js"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,10 @@
     "cheerio": "^0.20.0",
     "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
+    "jade": "^1.11.0",
     "moment": "^2.12.0",
     "mongoose": "^4.4.11",
+    "q": "^1.4.1",
     "underscore": "^1.8.3"
   }
 }
