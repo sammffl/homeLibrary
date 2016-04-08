@@ -7,6 +7,8 @@ var app = express();
 var controllers = require("./controllers");
 //var router = require("./routers/index");
 //var admin = require("./routers/admin");
+var db = require("./models");
+
 
 var config = require("./config")();
 

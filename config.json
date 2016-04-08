@@ -1,6 +1,7 @@
 {
   "httpPort": "8801",
   "httpsPort": "8802",
+  "mongoDB":"mongodb://27.115.58.228/xinyongjin",
   "doubanBookSearchUrl":"https://book.douban.com/subject_search?search_text={()}&cat=1001",
   "doubanBookTagUrl":"https://book.douban.com/tag/?icn=index-nav"
 }
