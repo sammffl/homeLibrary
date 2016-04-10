@@ -4,3 +4,9 @@
 #menu >#sign >button{
     margin-left: 10px;;
 }
+
+#search-jumbotron{
+    position: absolute;
+    top:50%;
+    margin-top: -188px;
+}
