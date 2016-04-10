@@ -33,6 +33,22 @@ html
                             a(href="#") Link
                         li
                             button.btn.btn-primary.navbar-btn Sign up
+        div.jumbotron
+            div.container
+                div.row
+                    div.col-xs-12
+                        div.input-group
+                            div.input-group-btn
+                                button#search-btn.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false",data-type="book")
+                                    span.text 书籍
+                                    span.caret
+                                ul.dropdown-menu#search-menu
+                                    li
+                                        a(href="javascript:void(0);",data-type="film") 电影
+                                    li
+                                        a(href="javascript:void(0);",data-type="teleplay") 电视剧
+                            input#search-text.form-control(type="text",aria-label="...")
+
         script(src="bower_components/jquery/dist/jquery.min.js")
         script(src="bower_components/bootstrap/dist/js/bootstrap.min.js")
         script(src="./static/js/common.js")
