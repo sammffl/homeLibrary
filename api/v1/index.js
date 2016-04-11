@@ -5,6 +5,6 @@ var router = express.Router();
 var config = require("../../config");
 
 //book Tags标签
-router.get('/tags', bookApi.tags);
-
+router.get('/books/tags', bookApi.tags);
+router.get('/books/:bookname', bookApi.bookList);
 module.exports = router;
