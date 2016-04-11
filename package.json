@@ -26,6 +26,7 @@
     "body-parser": "^1.15.0",
     "cheerio": "^0.20.0",
     "cookie-parser": "^1.4.1",
+    "cors": "^2.7.1",
     "express": "^4.13.4",
     "jade": "^1.11.0",
     "moment": "^2.12.0",

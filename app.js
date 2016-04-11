@@ -1,10 +1,12 @@
 var express = require('express'),
     https = require("https"),
     http = require('http'),
-    path = require('path');
+    path = require('path'),
+    cors = require('cors');
 
 var app = express();
 var controllers = require("./controllers");
+var apiV1 = require("./api/v1");
 var config = require("./config")();
 
 app.use('/static/', express.static(path.join(__dirname, 'public')));
@@ -12,6 +14,7 @@ app.use('/bower_components/', express.static(path.join(__dirname, "bower_compone
 app.set("views", path.join(__dirname, 'views'));
 app.set("view engine", "jade");
 
+app.use("/api/v1", cors(), apiV1);
 app.use("/", controllers);
 
 console.log(path.join(__dirname, "bower_components"));
