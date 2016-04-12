@@ -3,7 +3,7 @@ var home = require("./frontend/homeController");
 var router = express.Router();
 
 //home page
-router.get("/", home.index);
+router.get("/", home.indexGetHeadersMessage, home.index);
 
 
 module.exports = router;
