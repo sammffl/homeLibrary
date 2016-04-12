@@ -1,15 +1,15 @@
 var fs = require("fs"),
     path = require("path"),
     mongoose = require("mongoose"),
-    config = fs.readFileSync('config.json', "utf8");
+    config = require("../config")();
 var db = {};
-//console.log(config)
-var mongoDB = mongoose.connect(config.mongoDB);
-mongoDB.connection.on("error", function (err) {
+console.log(config);
+var mongoDB = mongoose.createConnection(config.mongoDB);
+mongoDB.on("error", function (err) {
     console.log(err);
 });
-mongoDB.connection.on("open", function () {
-    console.log("success");
+mongoDB.on("open", function () {
+    console.log("mongoDB success");
 });
 
 fs.readdirSync(__dirname)
@@ -22,5 +22,6 @@ fs.readdirSync(__dirname)
         db[model.collection.name] = model;
     });
 
+db["mongoDB"] = mongoDB;
 module.exports = db;
 
