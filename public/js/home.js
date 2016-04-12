@@ -15,5 +15,27 @@ $(function () {
     });
     $("#search-text").keyup(function () {
         console.log($("#search-btn").data("type"))
+    });
+
+    $("#sign-btn").click(function () {
+        console.log(1);
+        $.ajax({
+            url: "/sign",
+            data: {token: "1"},
+            method: "POST",
+            success: function (data) {
+
+            }
+        })
+    });
+    $("#unsign-btn").click(function () {
+        console.log(1);
+        $.ajax({
+            url: "/unsign",
+            method: "POST",
+            success: function (data) {
+
+            }
+        })
     })
 });

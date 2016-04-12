@@ -4,6 +4,7 @@ var express = require('express'),
     path = require('path'),
     cors = require('cors'),
     bodyParser = require("body-parser"),
+    cookieParser = require('cookie-parser'),
     session = require("express-session");
 
 var app = express();
@@ -17,7 +18,7 @@ app.set("views", path.join(__dirname, 'views'));
 app.set("view engine", "jade");
 app.enable('verbose errors');
 if ('production' == app.settings.env) app.disable('verbose errors');
-
+app.use(cookieParser('SamMFFL'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(session({
     resave: false, // don't save session if unmodified
