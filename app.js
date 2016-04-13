@@ -14,6 +14,8 @@ var config = require("./config")();
 
 app.use('/static/', express.static(path.join(__dirname, 'public')));
 app.use('/bower_components/', express.static(path.join(__dirname, "bower_components")));
+app.use("/demo/", express.static(path.join(__dirname, "test")));
+
 app.set("views", path.join(__dirname, 'views'));
 app.set("view engine", "jade");
 app.enable('verbose errors');

@@ -24,6 +24,8 @@
     "respond": "Respond#^1.4.2",
     "html5shiv": "^3.7.3",
     "device.js": "devicejs#^0.2.7",
-    "font-awesome": "Font-Awesome#^4.5.0"
+    "font-awesome": "Font-Awesome#^4.5.0",
+    "jquery-treetable": "^3.2.0",
+    "smalot-bootstrap-datetimepicker": "bootstrap-datetimepicker-master#^2.3.10"
   }
 }
