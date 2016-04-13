@@ -11,25 +11,30 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="row">
-        <div class='col-sm-6'>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
+<div class="search_item">
+    <div class="input-group input-group-sm">
+        <span class="input-group-addon">开始时间：</span>
+        <div class="input-group input-group-sm date form_date" data-link-field="review_start_date_input" data-link-format="yyyy-mm-dd" id="start_date_div">
+            <input type="text" class="form-control"  style="background-color: #ffffff" aria-describedby="sizing-addon3" placeholder="选择日期" value="" readonly id="identity_occurTime1">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
         </div>
-
     </div>
 </div>
 
 <script type="text/javascript">
     $(function () {
-        $('#datetimepicker1').datetimepicker();
+        $('#identity_occurTime1').datetimepicker({
+            language: 'zh-CN', // 汉化
+            weekStart: 0,
+            todayBtn: 1,
+            autoclose: 1, // 选择日期后自动关闭
+            pickerPosition: "bottom-left",
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0,
+            minView: "month", // 选择日期后，不会再跳转去选择时分秒
+            format: "yyyy-mm-dd" // 选择日期后，文本框显示的日期格式
+        });
     });
 </script>
 </body>
