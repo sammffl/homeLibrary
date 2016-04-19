@@ -1,5 +1,5 @@
 var utils = require("../../common/utils");
-var db = require("../../models");
+//var db = require("../../models");
 
 exports.index = function (req, res, next) {
     var body = "";

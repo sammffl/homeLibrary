@@ -1,6 +1,7 @@
 var express = require("express");
 var bookApi = require("./book");
 var filmApi = require("./film");
+var ajaxDemo = require("./ajaxDemo");
 
 var router = express.Router();
 var config = require("../../config")();
@@ -20,4 +21,7 @@ module.exports = router;
 
 
 //film
-router.get('/films/tags',filmApi.filmList);
+router.get('/films/tags', filmApi.filmList);
+
+//ajaxDemo
+router.get("/getText", ajaxDemo.getText);
