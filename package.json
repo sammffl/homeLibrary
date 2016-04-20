@@ -6,7 +6,7 @@
   "scripts": {
     "test": "bebel-node ./test/importES6.js",
     "start": "node ./app.js",
-    "build":"babel test -d es5Lib"
+    "build": "babel test -d es5Lib"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
     "moment": "^2.12.0",
     "mongoose": "^4.4.11",
     "node-uuid": "^1.4.7",
+    "pageres": "^4.1.1",
     "q": "^1.4.1",
     "underscore": "^1.8.3"
   },
