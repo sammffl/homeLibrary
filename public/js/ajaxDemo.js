@@ -1,5 +1,9 @@
 $(function () {
-    $("#btn").click(function () {
+    $("#btn").click(function (e) {
+        e = e || window.event;
+        var ele = e.target || e.srcElement;
+        alert(ele);
+        e.stopPropagation();
         $.ajax({
             url: "http://localhost:8801/api/v1/getText",
             method: "GET",
@@ -15,19 +19,4 @@ $(function () {
         });
     })
 });
-
-
-
-    jQuery.fn.autoscroll = function (selector) {
-
-        $('html,body').animate({scrollTop: $(this).offset().top}, 500);
-    };
-
-    //然后像这样来滚动到你希望去到的class/area上。
-
-
-
-       $(function () {
-           $("").autoscroll();
-       })
 
