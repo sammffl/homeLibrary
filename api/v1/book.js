@@ -39,6 +39,12 @@ exports.tags = function (req, res, next) {
     })
 };
 
+/**
+ *
+ * @param req
+ * @param res
+ * @param next
+ */
 exports.bookList = function(req,res,next){
     var url = config.doubanBookSearchUrl;
     url = url.replace("{()}", req.params.bookname);
