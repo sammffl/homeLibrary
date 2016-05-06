@@ -9,5 +9,6 @@ router.get("/home", home.indexGetHeadersMessage, home.index);
 router.post("/sign", home.signUser);
 router.post("/unsign", home.unsignUser);
 
-router.get("/ajaxDemo",ajaxPage.ajaxPage);
+router.get("/ajaxDemo", ajaxPage.ajaxPage);
+router.get("/canvasNest", ajaxPage.canvasNest);
 module.exports = router;

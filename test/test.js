@@ -16,3 +16,11 @@ var row = {
     upd_date:null
 }
 
+var rgx = /(\d+)(\d{2})/;
+while (rgx.test(num)) {
+    // $1、$2 正则的子匹配，每个括号
+    // rgx 中 $1 : (\d+) ; $2 : (\d{3})
+    num = num.replace(rgx, '$1,$2');
+    console.log(num)
+}
+

@@ -6,3 +6,7 @@
 exports.ajaxPage = function (req, res, next) {
     res.render("ajaxDemo");
 }
+
+exports.canvasNest = function (req, res, next) {
+    res.render("canvasNest");
+}
